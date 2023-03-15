@@ -17,6 +17,7 @@ const LibraryContext = createContext<ContextProps>({
   inputColors: {},
   // @ts-ignore
   translations: {},
+  autoFocus: true,
 })
 
 export default LibraryContext

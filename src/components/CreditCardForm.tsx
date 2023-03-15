@@ -29,6 +29,7 @@ const CreditCardForm: React.FC<LibraryProps> = (props) => {
     translations: parentTranslations,
     overrides,
     requiresName = true,
+    autoFocus = true,
   } = props
   const translations = getTranslations(parentTranslations)
   const { trigger, watch } = useFormContext()
@@ -54,7 +55,7 @@ const CreditCardForm: React.FC<LibraryProps> = (props) => {
   const [focusedField, setFocusedField] = useState<CardFields | null>(null)
 
   useEffect(() => {
-    if (cardNumberRef?.current) {
+    if (cardNumberRef?.current && autoFocus) {
       cardNumberRef.current.focus()
     }
   }, [cardNumberRef])

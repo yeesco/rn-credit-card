@@ -72,4 +72,5 @@ export type LibraryProps = {
   inputColors?: InputColors
   fonts?: Fonts
   overrides?: Overrides
+  autoFocus?: boolean
 }
